@@ -24,13 +24,13 @@ Atomicity is guaranteed using Lua scripts, preventing race conditions in distrib
 **Architecture**
 
   Client
-    ↓
+    ->
   Controller (REST API)
-    ↓
+    ->
   Service Layer (Strategy Pattern)
-    ↓
+    ->
   Rate Limiting Algorithm
-    ↓
+    ->
   Redis (Lua Script - Atomic Execution)
-    ↓
+    ->
   Response (200 / 429)
